@@ -17,4 +17,10 @@ describe('calculator', function () {
     assert.equal(7, calculator.runningTotal);
   })
 
+  it('should be able to subtract numbers and display total', function() {
+    calculator.previousTotal = 4;
+    calculator.subtract(2);
+    assert.equal(2, calculator.runningTotal);
+  })
+
 });
