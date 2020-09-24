@@ -31,6 +31,8 @@ describe('calculator', function () {
 
   it('should be able to divide numbers and display total', function() {
     calculator.previousTotal = 12;
+    calculator.divide(2);
+    assert.equal(6, calculator.runningTotal);
   })
 
 });
