@@ -23,4 +23,14 @@ describe('calculator', function () {
     assert.equal(2, calculator.runningTotal);
   })
 
+  it('should be able to multiply numbers and display total', function() {
+    calculator.previousTotal = 10;
+    calculator.multiply(5);
+    assert.equal(50, calculator.runningTotal);
+  })
+
+  it('should be able to divide numbers and display total', function() {
+    calculator.previousTotal = 12;
+  })
+
 });
