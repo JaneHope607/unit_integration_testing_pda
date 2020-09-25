@@ -59,20 +59,23 @@ describe('calculator functionality', function() {
   })
 
 
-  // it('should have expected output for decimal numbers', function() {
-  //   element(by.css('#number5')).click();
-  //   element(by.css('#operator_multiply')).click();
-  //   element(by.css('#number3')).click();
-  //   element(by.css('#operator_equals')).click();
-  //   expect(running_total.getAttribute('value')).to.eventually.equal('20')
-  // })
+  it('should have expected output for decimal numbers', function() {
+    element(by.css('#number5')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('2.5')
+  })
 
 
-  // it('should have expected output for large numbers', function() {
-  //   element(by.css('#number5')).click();
-  //   element(by.css('#operator_multiply')).click();
-  //   element(by.css('#number3')).click();
-  //   element(by.css('#operator_equals')).click();
-  //   expect(running_total.getAttribute('value')).to.eventually.equal('20')
-  // })
+  it('should have expected output for large numbers', function() {
+    element(by.css('#number5')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('25000')
+  })
 });
